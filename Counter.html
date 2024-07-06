@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+  <body class="bg-yellow-100 text-center justify-center ">
+    <div class="box-content border-black rounded-md border-double p-8">
+    <div class="flex text-center justify-center pt-32">
+    <h2 class="text-center justify-center text-4xl font-bold">Counter</h2><br>
+</div>
+<br>
+    <label id="counter"class="text-3xl font-bold text-center">0</label><br />
+    <br>
+    <div class="space-x-4" id="btn">
+      <button class="bg-blue-400 hover:bg-blue-500 border rounded-md border-solid px-2.5 border-black" id="increase">Increase</button>
+      <button class="bg-red-500 hover:bg-red-600 border rounded-md border-solid px-2.5 border-black" id="decrease">Decrease</button>
+      <button  class="bg-gray-300 hover:bg-gray-400 border rounded-md border-solid px-2.5 border-black" id="reset">Reset</button>
+    </div>
+</div>
+    <script>
+        let count = 0;
+        const increase = document.getElementById("increase");
+        const decrease = document.getElementById("decrease");
+        const reset = document.getElementById("reset");
+        const counter = document.getElementById("counter");
+
+        increase.onclick = function (){
+            count++;
+            counter.textContent = count;
+        }
+        decrease.onclick = function (){
+            count--;
+            counter.textContent = count;
+        }
+        reset.onclick = function (){
+            count = 0;
+            counter.textContent = count;
+        }
+
+    </script>
+  </body>
+</html>
