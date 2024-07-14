@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="container box-border border-solid border-4 border-black items-center mx-24 my-11"
+    >
+      <div class="flex flex-col items-center bg-green-300">
+        <h2 class="text-center font-semibold font-mono mt-16">
+          Create Random Numbers by Clicking here
+        </h2>
+        <br />
+        <button
+          class="font-mono text-center border-solid border-black text-lg border-2 bg-blue-400 mx-28 my-12 px-16"
+          id="gen"
+        >
+          Generate Number</button
+        ><br />
+        <label
+          class="font-mono text-center text-5xl text-black mb-10"
+          id="myLabel"
+        >0
+        </label>
+        <button
+          class="font-mono text-center border-solid border-black text-lg border-2 bg-blue-400 mx-28 my-5 px-16"
+          id="reset"
+        >
+          RESET</button
+        ><br />
+      </div>
+    </div>
+
+    <script>
+      const max = 100;
+      const min = 1;
+      const btn = document.getElementById("gen");
+      const reset = document.getElementById("reset");
+      const label = document.getElementById("myLabel");
+      let randomnum;
+
+      btn.onclick = function () {
+        randomnum = Math.floor(Math.random() * (max - min)) + min;
+        label.textContent = randomnum;
+      };
+      reset.onclick =  function(){
+        label.textContent = 0;
+      }
+    </script>
+  </body>
+</html>

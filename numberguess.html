@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guess</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <script src="numberguess.js"></script>
+</head>
+<body class="bg-gray-300">
+  <div class="container items-center mx-24 my-2">
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold bg-green-400 block rounded-md border border-transparent shadow-2xl shadow-black p-4 text-xl text-center font-mono mt-2 mb-5 text-white">
+        Guess the Number!?
+      </h1>
+      <p class="font-mono text-md font-medium  bg-green-300 block rounded-md border border-transparent shadow-2xl shadow-black p-4 mt-2 mb-5">
+        Bagels is a deductive logic game...<br />
+        I'm thinking of a 3-digit number. Try to guess what it is.<br />
+        Here are some clues:<br />
+        When I Say: <br />
+        Pico --> One digit is correct but in the wrong position.<br />
+        Fermi --> One digit is correct and in the right position.<br />
+        Bagels --> No digit is correct.<br />
+        I have thought up a number...<br />
+        You have 10 guesses to get it.<br />
+      </p>
+      <br>
+      
+      <input type="text" id="input" placeholder="Enter your guess here" class="text-lg p-2 shadow-md rounded">
+      <div>
+        <button onclick="checkGuess()" class="border-2 border-solid border-transparent rounded-lg shadow-2xl shadow-black font-3xl p-2 mt-5 mb-5 mx-4 bg-green-400 font-black">
+           Check! 
+        </button>
+        <button onclick="resetGame()" class="border-2 border-solid border-transparent rounded-lg shadow-2xl shadow-black font-3xl p-2 mt-5 mb-5 bg-gray-400 font-black">
+           Reset 
+        </button>
+      </div>
+      <label id="feedback" class="text-xl font-mono font-semibold"></label>
+      <label id="remainingGuesses" class="text-xl font-mono font-semibold"></label>
+      <label id="win" class="text-2xl font-bold font-mono"></label>
+    </div>
+  </div>
+</body>
+</html>
